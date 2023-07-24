@@ -1,0 +1,157 @@
+:root {
+    /* Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Bright-blue-hover: hsla(245, 75%, 52%, 0.705);
+    /* Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+/* Global */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+body {
+    background: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--Pale-blue);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main {
+    background-color: hsl(0, 0%, 100%);
+    width: 400px;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+}
+.hero img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+/* Info */
+.info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.info h1 {
+    color: var(--Dark-blue);
+    font-size: 24px;
+    font-weight: 900;
+}
+.info p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Desaturated-blue);
+    padding: 15px 0;
+    line-height: 1.6;
+}
+
+/* Plan */
+.plan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0 20px 0;
+    padding: 20px 15px;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: var(--Very-pale-blue);
+}
+.plan img{
+    background-color: var(--Pale-blue);
+    border-radius: 50%;
+}
+.plan_info{
+    margin-left: -50px;
+}
+.info h2{
+    color: var(--Dark-blue);
+    font-weight: 700;
+}
+.info h3{
+    font-weight: 500;
+    color: var(--Desaturated-blue);
+}
+.info .plan a{
+    color: var(--Bright-blue);
+    font-weight: 700;
+    margin-top: 0;
+}
+.info .plan a:hover{
+    color: var(--Bright-blue-hover);
+    transition: all 0.3s ease-out;
+}
+
+/* Buttons */
+.btn {
+    padding: 15px 0;
+    border: none;
+    background-color: var(--Bright-blue);
+    border-radius: 1rem;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0px 10px 10px 0px rgba(56, 41, 224,0.25);
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: var(--Bright-blue-hover);
+    transition: all 0.3s ease-out;
+}
+.Cancel_link {
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.Cancel_link:hover {
+    color: var(--Dark-blue);
+    transition: all 0.3s ease-out;
+}
+
+/* Footer */
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    padding: 15px 0;
+    color: black;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 550px){
+    main{
+      width: 350px;
+    }
+    .info {
+        padding: 30px;
+    }
+    .info p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .plan_info{
+        margin-left: -30px;
+    }
+}
